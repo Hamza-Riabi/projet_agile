@@ -1,28 +1,67 @@
-# 🛒💰 Du panier à la trésorerie — Une histoire d’achat “raisonnée”
+# Storytelling unifié – Du panier à la trésorerie
+
+## Une histoire commune (le fil rouge)
+
+Notre projet raconte l’histoire d’un client sur une plateforme e-commerce, depuis l’intention d’achat jusqu’à la maîtrise de son budget.
+
+Tout commence côté boutique : le client parcourt un catalogue et construit son **panier d’achat**. Il ajoute des produits, en supprime, consulte le contenu et vérifie le **montant total**. Le panier joue le rôle de “mémoire” des choix effectués avant toute décision finale.
+
+Mais une question revient systématiquement au moment de finaliser l’achat : **ai-je les moyens ?**  
+C’est là que le second univers entre en scène : le **CompteBancaire**. Il représente la capacité du client à financer ses achats. Il permet de déposer, retirer, contrôler des règles simples (montant valide, solde suffisant) et sécurise l’idée qu’un achat n’est possible que si la trésorerie suit.
+
+Notre fusion consiste donc à relier deux réalités complémentaires :
+- le **panier** répond à : *“Qu’est-ce que je veux acheter ? Combien ça coûte ?”*
+- le **compte bancaire** répond à : *“Puis-je me le permettre ? Quelles règles protègent les opérations ?”*
+
+L’objectif n’est pas de construire un site e-commerce complet, mais un **mini-univers pédagogique** : des objets simples, des règles explicites, des tests qui garantissent que l’histoire reste cohérente.
 
 ---
 
-## 📖 Chapitre 1 — étape clé du parcours client 🛍️
-Tout commence par une intention simple : acheter.
-Le client arrive sur le site d’achat, explore le catalogue et, au fil de ses découvertes, construit son panier d’achat. Chaque ajout correspond à une décision, chaque suppression à une hésitation levée.
+## Description du projet (vision vulgarisée)
 
-Le panier devient alors une mémoire vivante : il conserve la trace des produits sélectionnés et retirés, et calcule en permanence le montant total afin de garantir une expérience claire et maîtrisée.
+Le projet est composé de deux modules qui se complètent.
 
-Mais cette histoire ne se limite pas à un simple inventaire. Elle obéit à des règles concrètes du monde réel : il est impossible d’ajouter un produit inactif, la quantité demandée ne peut pas dépasser le stock disponible, et un même produit ne peut apparaître qu’une seule fois dans le panier
+### Module A – Panier d’achat
+
+Le panier permet au client de :
+- ajouter un produit actif (avec stock suffisant),
+- supprimer un produit,
+- consulter le contenu,
+- calculer le total (somme des sous-totaux).
+
+Règles clés :
+- un produit doit être **actif** pour être ajouté,
+- la quantité ajoutée doit être comprise entre **1** et le **stock disponible**,
+- une seule **ligne de panier** existe par produit,
+- le total du panier est recalculé après chaque action,
+- un panier peut être vide.
+
+### Module B – Compte bancaire
+
+Le compte bancaire permet au client de :
+- déposer une somme,
+- retirer une somme,
+- empêcher les opérations incohérentes (montant invalide, solde insuffisant).
+
+Règles clés :
+- montant strictement positif,
+- retrait impossible si le solde n’est pas suffisant.
 
 ---
 
-## 🏦 Chapitre 2 — Le rôle du compte bancaire 🔐
-Vient ensuite le moment où l’envie rencontre la réalité : « Est-ce que je peux me le permettre ? »
-C’est ici qu’intervient le CompteBancaire. Il ne cherche pas à reproduire un système de paiement complet ; il joue un rôle plus fondamental, celui de garant de la faisabilité des opérations.
+## Comment les deux se rencontrent (la collaboration)
 
-Déposer, retirer, vérifier un solde sont des actions simples, mais encadrées par des règles strictes : un montant doit être valide, et une dépense ne peut jamais dépasser le solde disponible. Le compte bancaire impose ainsi un cadre sécurisé et protège le système contre toute incohérence.
+La fusion donne un scénario “réaliste” et simple :
 
----
+1. Le client construit un panier (monde e-commerce).
+2. Il consulte le total (toujours e-commerce).
+3. Il compare ce total à son solde (monde bancaire).
+4. Option pédagogique : une action “collaborative” peut être simulée, par exemple :
+   - **pré-validation du budget** : “Le total du panier est-il finançable ?”
+   - ou **tentative de débit** (si souhaité), sans implémenter tout le paiement.
 
-## 🤝 Chapitre 3 — La rencontre : décider sans se tromper ✅
-La fusion des deux modules relie naturellement ces mondes : le panier montre ce que le client souhaite, le compte bancaire vérifie ce qu’il peut se permettre. Ensemble, ils permettent une pré-validation du budget, pour savoir immédiatement si un achat est réaliste.
+Cette collaboration est idéale pour le TP, car elle illustre clairement :
+- deux objets différents,
+- une interaction entre eux,
+- des tests qui protègent le comportement global.
 
-Cette approche pédagogique utilise des objets simples et des règles explicites, vérifiées par des tests. Ils garantissent la cohérence du système et permettent de refactorer le code sans modifier son comportement.
-
----
