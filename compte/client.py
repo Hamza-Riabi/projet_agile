@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, List
 from compte.compte_bancaire import CompteBancaire
 
 @dataclass
