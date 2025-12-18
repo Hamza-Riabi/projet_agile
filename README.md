@@ -2,17 +2,21 @@
 
 ---
 
-## 📖 Chapitre 1 — Le panier, mémoire de l’envie 🛍️
+## 📖 Chapitre 1 — étape clé du parcours client 🛍️
 Tout commence par une intention simple : acheter.
-Le client arrive sur le site d’achat, explore le catalogue et, au fil de ses découvertes, construit son panier d’achat. Chaque ajout ✅ représente une décision, chaque suppression ❌ une hésitation levée.
-Le panier devient alors une mémoire vivante : il conserve la trace des produits sélectionnés, de ceux retirés, et calcule en permanence le montant total 💶 afin de garantir une expérience claire et maîtrisée.
-Mais cette histoire ne se limite pas à un simple inventaire. Elle obéit à des règles concrètes du monde réel : il est impossible d’ajouter un produit inactif 🚫, la quantité demandée ne peut pas dépasser le stock disponible 📦, et un même produit ne peut apparaître qu’une seule fois dans le panier 🧾.
+Le client arrive sur le site d’achat, explore le catalogue et, au fil de ses découvertes, construit son panier d’achat. Chaque ajout correspond à une décision, chaque suppression à une hésitation levée.
+
+Le panier devient alors une mémoire vivante : il conserve la trace des produits sélectionnés et retirés, et calcule en permanence le montant total afin de garantir une expérience claire et maîtrisée.
+
+Mais cette histoire ne se limite pas à un simple inventaire. Elle obéit à des règles concrètes du monde réel : il est impossible d’ajouter un produit inactif, la quantité demandée ne peut pas dépasser le stock disponible, et un même produit ne peut apparaître qu’une seule fois dans le panier
 
 ---
 
 ## 🏦 Chapitre 2 — Le compte bancaire, gardien du possible 🔐
-Vient ensuite le moment où l’envie rencontre la réalité : **“Est-ce que je peux me le permettre ?”** 🤔  
-C’est ici qu’entre en scène le `CompteBancaire`. Il ne cherche pas à reproduire tout un système de paiement : il joue un rôle plus fondamental — celui du **gardien du possible** 🛡️. Déposer ➕, retirer ➖, vérifier un solde 👀… ce sont des actions simples, mais elles imposent une discipline : un montant doit être valide ✅, et une dépense ne peut pas dépasser ce que l’on possède ⚠️. Le compte bancaire donne un cadre, une sécurité, et protège l’histoire contre l’incohérence.
+Vient ensuite le moment où l’envie rencontre la réalité : « Est-ce que je peux me le permettre ? »
+C’est ici qu’intervient le CompteBancaire. Il ne cherche pas à reproduire un système de paiement complet ; il joue un rôle plus fondamental, celui de garant de la faisabilité des opérations.
+
+Déposer, retirer, vérifier un solde sont des actions simples, mais encadrées par des règles strictes : un montant doit être valide, et une dépense ne peut jamais dépasser le solde disponible. Le compte bancaire impose ainsi un cadre sécurisé et protège le système contre toute incohérence.
 
 ---
 
