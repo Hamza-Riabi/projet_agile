@@ -1,116 +1,23 @@
----
-
-## **🎯 Intitulé**
-
-Gestion du panier d’achat
+# 🛒💰 Du panier à la trésorerie — Une histoire d’achat “raisonnée”
 
 ---
 
-## **👤 Rôle**
-
-*En tant que* client d’une plateforme e-commerce,
-*Je veux* pouvoir gérer un panier d’achat (ajout, suppression, consultation),
-*Afin de* connaître à tout moment le contenu et le montant total de mes achats.
-
----
-
-## **🧩 Contexte métier**
-
-Le panier d’achat permet de regrouper les produits sélectionnés par un utilisateur avant une éventuelle commande.
-Il constitue une étape essentielle entre la consultation du catalogue et la validation finale.
+## 📖 Chapitre 1 — Le panier, mémoire de l’envie 🛍️
+Tout commence par une intention simple : acheter.
+Le client arrive sur le site d’achat, explore le catalogue et, au fil de ses découvertes, construit son panier d’achat. Chaque ajout ✅ représente une décision, chaque suppression ❌ une hésitation levée.
+Le panier devient alors une mémoire vivante : il conserve la trace des produits sélectionnés, de ceux retirés, et calcule en permanence le montant total 💶 afin de garantir une expérience claire et maîtrisée.
+Mais cette histoire ne se limite pas à un simple inventaire. Elle obéit à des règles concrètes du monde réel : il est impossible d’ajouter un produit inactif 🚫, la quantité demandée ne peut pas dépasser le stock disponible 📦, et un même produit ne peut apparaître qu’une seule fois dans le panier 🧾.
 
 ---
 
-## **📌 Périmètre fonctionnel**
-
-Fonctionnalités couvertes dans ce projet :
-
-* ajout de produits au panier
-* suppression de produits
-* calcul du total du panier
-* consultation du panier
-
-Fonctionnalités hors périmètre :
-
-* modification avancée des quantités
-* validation de la commande
-* paiement, livraison et facturation
+## 🏦 Chapitre 2 — Le compte bancaire, gardien du possible 🔐
+Vient ensuite le moment où l’envie rencontre la réalité : **“Est-ce que je peux me le permettre ?”** 🤔  
+C’est ici qu’entre en scène le `CompteBancaire`. Il ne cherche pas à reproduire tout un système de paiement : il joue un rôle plus fondamental — celui du **gardien du possible** 🛡️. Déposer ➕, retirer ➖, vérifier un solde 👀… ce sont des actions simples, mais elles imposent une discipline : un montant doit être valide ✅, et une dépense ne peut pas dépasser ce que l’on possède ⚠️. Le compte bancaire donne un cadre, une sécurité, et protège l’histoire contre l’incohérence.
 
 ---
 
-## **⚙️ Règles métier**
-
-* un produit doit être actif pour être ajouté au panier
-* la quantité ajoutée doit être comprise entre 1 et le stock disponible
-* une seule ligne de panier existe par produit
-* le total du panier est recalculé après chaque action
-* un panier peut être vide
+## 🤝 Chapitre 3 — La rencontre : décider sans se tromper ✅
+La fusion de nos deux modules relie naturellement ces mondes : le panier décrit **ce que le client veut** 🎯, le compte bancaire vérifie **ce que le client peut** 💳. Ensemble, ils permettent une étape essentielle : la **pré-validation du budget** 📊. Avant toute idée de commande 📦, le client peut comparer le total du panier à son solde et savoir immédiatement si son achat est réaliste ✅ ou impossible ❌.  
+Cette collaboration est au cœur de notre approche pédagogique 🎓 : on met en scène des objets simples 🧩, on rend leurs règles explicites 📌, puis on s’assure que l’histoire reste vraie grâce à des **tests** 🧪 (unitaires et scénarios BDD). À chaque évolution, la “barre verte” 🟩 confirme que le récit tient debout — et nous permet de refactorer 🛠️ (renommer, extraire des méthodes) et d’améliorer le code sans trahir le comportement attendu.
 
 ---
-
-## **🧪 Scénarios & critères d’acceptation**
-
-### **Scénario 1 – Ajouter un produit au panier (US1)**
-
-*Étant donné* un panier vide
-*Et* un produit actif disponible en stock
-*Quand* l’utilisateur ajoute le produit au panier
-*Alors* :
-
-* le produit est ajouté au panier
-* une ligne de panier est créée
-* le total du panier est mis à jour
-
----
-
-### **Scénario 2 – Supprimer un produit du panier (US2)**
-
-*Étant donné* un panier contenant un produit
-*Quand* l’utilisateur supprime ce produit
-*Alors* :
-
-* la ligne de panier est supprimée
-* le panier est mis à jour
-* le panier peut devenir vide
-
----
-
-### **Scénario 3 – Calculer le total du panier (US3)**
-
-*Étant donné* un panier contenant plusieurs produits
-*Quand* l’utilisateur consulte le total
-*Alors* :
-
-* le montant total correspond à la somme des sous-totaux des produits
-
----
-
-### **Scénario 4 – Consulter un panier (US4)**
-
-*Étant donné* un panier existant
-*Quand* l’utilisateur consulte son panier
-*Alors* :
-
-* le contenu du panier est affiché
-* le total général est visible
-  *Et si le panier est vide* :
-* un message indiquant que le panier est vide est affiché
-
----
-
-## **🧪 Stratégie de tests**
-
-### **Tests unitaires**
-
-* ajout d’un produit
-* suppression d’un produit
-* calcul du total
-* état d’un panier vide
-
-### **Tests fonctionnels (BDD)**
-
-* validation des scénarios US1 à US4 à partir de fichiers `.feature`
-* vérification du comportement global du panier
-
----
-
