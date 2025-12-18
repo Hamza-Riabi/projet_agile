@@ -1,6 +1,6 @@
 # Storytelling unifié – Du panier à la trésorerie
 
-## Une histoire commune (le fil rouge)
+## Une histoire commune
 
 Notre projet raconte l’histoire d’un client sur une plateforme e-commerce, depuis l’intention d’achat jusqu’à la maîtrise de son budget.
 
@@ -17,7 +17,7 @@ L’objectif n’est pas de construire un site e-commerce complet, mais un **min
 
 ---
 
-## Description du projet (vision vulgarisée)
+## Description du projet 
 
 Le projet est composé de deux modules qui se complètent.
 
