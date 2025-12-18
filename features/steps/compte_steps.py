@@ -180,7 +180,6 @@ def step_panier_est_vide(context):
 def step_verifier_total(context, total):
     assert context.panier.calculer_total() == total
 
-<<<<<<< HEAD
 
 
 
@@ -229,5 +228,3 @@ def step_solde_inchange(context, solde):
 
 
 
-=======
->>>>>>> f0bd2dbe564c23d550c0a7a3546c147a9a16c22e
