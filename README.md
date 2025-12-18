@@ -12,7 +12,7 @@ Mais cette histoire ne se limite pas à un simple inventaire. Elle obéit à des
 
 ---
 
-## 🏦 Chapitre 2 — Le compte bancaire, gardien du possible 🔐
+## 🏦 Chapitre 2 — Le rôle du compte bancaire 🔐
 Vient ensuite le moment où l’envie rencontre la réalité : « Est-ce que je peux me le permettre ? »
 C’est ici qu’intervient le CompteBancaire. Il ne cherche pas à reproduire un système de paiement complet ; il joue un rôle plus fondamental, celui de garant de la faisabilité des opérations.
 
@@ -21,7 +21,8 @@ Déposer, retirer, vérifier un solde sont des actions simples, mais encadrées 
 ---
 
 ## 🤝 Chapitre 3 — La rencontre : décider sans se tromper ✅
-La fusion de nos deux modules relie naturellement ces mondes : le panier décrit **ce que le client veut** 🎯, le compte bancaire vérifie **ce que le client peut** 💳. Ensemble, ils permettent une étape essentielle : la **pré-validation du budget** 📊. Avant toute idée de commande 📦, le client peut comparer le total du panier à son solde et savoir immédiatement si son achat est réaliste ✅ ou impossible ❌.  
-Cette collaboration est au cœur de notre approche pédagogique 🎓 : on met en scène des objets simples 🧩, on rend leurs règles explicites 📌, puis on s’assure que l’histoire reste vraie grâce à des **tests** 🧪 (unitaires et scénarios BDD). À chaque évolution, la “barre verte” 🟩 confirme que le récit tient debout — et nous permet de refactorer 🛠️ (renommer, extraire des méthodes) et d’améliorer le code sans trahir le comportement attendu.
+La fusion des deux modules relie naturellement ces mondes : le panier montre ce que le client souhaite, le compte bancaire vérifie ce qu’il peut se permettre. Ensemble, ils permettent une pré-validation du budget, pour savoir immédiatement si un achat est réaliste.
+
+Cette approche pédagogique utilise des objets simples et des règles explicites, vérifiées par des tests. Ils garantissent la cohérence du système et permettent de refactorer le code sans modifier son comportement.
 
 ---
