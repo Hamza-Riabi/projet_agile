@@ -82,7 +82,15 @@ class PanierAchat:
 
 
 
-#ajouter aprés fusion
-    def payer(self, compte_bancaire):
+#avant design pattern stratégie de paiement : seulement compte bancaire est pris en considération
+    # def payer(self, compte_bancaire):
+    #     montant = self.calculer_total()
+    #     compte_bancaire.retirer(montant)
+
+#nouveau méthode avec design pattern stratégie de paiement :
+   	# Paiement du panier (Strategy)
+    # Paiement du panier (Strategy)
+    def payer(self, paiement_strategy):
         montant = self.calculer_total()
-        compte_bancaire.retirer(montant)
+        paiement_strategy.payer(montant)
+

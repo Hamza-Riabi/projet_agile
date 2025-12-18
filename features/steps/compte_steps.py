@@ -180,29 +180,3 @@ def step_panier_est_vide(context):
 def step_verifier_total(context, total):
     assert context.panier.calculer_total() == total
 
-
-
-
-#design pattern paiement test
-
-@given("un compte bancaire avecc un solde initial de {solde:d}")
-def step_compte(context, solde):
-    context.compte = CompteBancaire("ClientTest", solde)
-
-
-@given("un panier contenant un produit de prix {prix:d} et quantité {quantite:d}")
-def step_panier(context, prix, quantite):
-    context.panier = PanierAchat()
-    produit = Produit("ProduitTest", prix, 10, True)
-    context.panier.ajouter_produit(produit, quantite)
-
-
-@when("le client paie le panier")
-def step_payer_panier(context):
-    paiement = PaiementParCompte(context.compte)
-    context.panier.payer(paiement)
-
-
-@then("le solde du compte devient {solde_final:d}")
-def step_verifier_solde(context, solde_final):
-    assert context.compte.solde == solde_final    
