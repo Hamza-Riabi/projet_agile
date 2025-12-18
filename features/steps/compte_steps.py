@@ -192,3 +192,24 @@ def step_payer_panier(context):
 def step_verifier_solde(context, solde_final):
     assert context.compte.solde == solde_final    
 
+
+
+@when("le client tente de payer le panier")
+def step_tente_paiement(context):
+    paiement = PaiementParCompte(context.compte)
+    try:
+        context.panier.payer(paiement)
+        context.erreur = None
+    except Exception as e:
+        context.erreur = e
+
+@then("le paiement est refusé")
+def step_paiement_refuse(context):
+    assert context.erreur is not None
+
+@then("le solde du compte reste {solde:d}")
+def step_solde_inchange(context, solde):
+    assert context.compte.solde == solde
+
+
+
