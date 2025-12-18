@@ -60,7 +60,7 @@ def step_given_client(context, nom):
 @when("il ouvre un compte avec un solde initial de {solde_initial:d}")
 def step_when_ouvrir_compte(context, solde_initial):
     try:
-        context.client.ouvrir_compte(solde_initial)
+        context.compte = context.client.ouvrir_compte(solde_initial)
     except Exception as e:
         context.exception = e
 
@@ -69,11 +69,9 @@ def step_when_ouvrir_compte(context, solde_initial):
 
 @then("un compte bancaire est créé")
 def step_then_compte_cree(context):
-    assert context.client.compte is not None
+    assert len(context.client.comptes) == 1
 
 
 @then("le solde du compte est égal à {solde_initial:d}")
 def step_then_solde_compte(context, solde_initial):
-    assert context.client.compte.solde == solde_initial
-    
-
+    assert context.compte.solde == solde_initial

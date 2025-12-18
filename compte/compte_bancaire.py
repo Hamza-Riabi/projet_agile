@@ -2,8 +2,11 @@ from dataclasses import dataclass
 
 @dataclass
 class CompteBancaire:
-    titulaire: str
+   #titulaire: str
+   #0..1 
+    titulaire: Optional["Client"] = None 
     solde: float = 0.0
+      
 
     def deposer(self, montant: float) -> None:
         if montant <= 0:
