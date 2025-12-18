@@ -1,4 +1,5 @@
 from LignePanier import LignePanier
+from compte.compte_bancaire import CompteBancaire
 
 
 class PanierAchat:
@@ -78,3 +79,10 @@ class PanierAchat:
     # Getter pour tests unitaires
     def get_lignes(self):
         return self.lignes_panier
+
+
+
+#ajouter aprés fusion
+    def payer(self, compte_bancaire):
+        montant = self.calculer_total()
+        compte_bancaire.retirer(montant)
