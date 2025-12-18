@@ -3,7 +3,10 @@
 ---
 
 ## 📖 Chapitre 1 — Le panier, mémoire de l’envie 🛍️
-Tout commence par une intention simple : acheter. Le client arrive sur la boutique, explore le catalogue et, au fil de ses découvertes, construit son **panier d’achat**. Chaque ajout ✅ est une petite décision, chaque suppression ❌ une hésitation levée. Le panier devient alors une **mémoire vivante** : il garde la trace de ce qui a été choisi, de ce qui a été abandonné, et calcule en permanence le **montant total** 💶 pour rendre l’expérience claire et maîtrisée. Mais cette histoire n’est pas un simple inventaire : elle respecte des règles concrètes du monde réel — on n’ajoute pas un produit inactif 🚫, on ne dépasse pas le stock 📦, et un même produit ne se disperse pas en dix lignes différentes 🧾.
+Tout commence par une intention simple : acheter.
+Le client arrive sur le site d’achat, explore le catalogue et, au fil de ses découvertes, construit son panier d’achat. Chaque ajout ✅ représente une décision, chaque suppression ❌ une hésitation levée.
+Le panier devient alors une mémoire vivante : il conserve la trace des produits sélectionnés, de ceux retirés, et calcule en permanence le montant total 💶 afin de garantir une expérience claire et maîtrisée.
+Mais cette histoire ne se limite pas à un simple inventaire. Elle obéit à des règles concrètes du monde réel : il est impossible d’ajouter un produit inactif 🚫, la quantité demandée ne peut pas dépasser le stock disponible 📦, et un même produit ne peut apparaître qu’une seule fois dans le panier 🧾.
 
 ---
 
